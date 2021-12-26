@@ -1,7 +1,7 @@
 {
-  "name": "Odyssey Hackathon",
-  "description": "Contracting and internship services",
-  "repository": "https://github.com/aLehav/OdysseyCodathon",
+  "name": "Personal Website",
+  "description": "Source for personal projects and experience",
+  "repository": "https://github.com/aLehav/adamlehaviwebsite",
   "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/main/public/node.svg",
   "start_url": "https://odyssey-hackathon.herokuapp.com/"
   "keywords": ["node", "express", "heroku"],
