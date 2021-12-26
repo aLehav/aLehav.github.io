@@ -3,7 +3,7 @@
   "description": "Source for personal projects and experience",
   "repository": "https://github.com/aLehav/adamlehaviwebsite",
   "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/main/public/node.svg",
-  "start_url": "https://odyssey-hackathon.herokuapp.com/"
+  "start_url": "https://adam-lehavi-website.herokuapp.com/"
   "keywords": ["node", "express", "heroku"],
   "image": "heroku/nodejs"
 }
