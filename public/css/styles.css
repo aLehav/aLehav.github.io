@@ -1,3 +1,10 @@
 body {
   font-family: "Times New Roman", Times, serif;
 }
+.button{
+  background-color: aqua;
+  font-variant: normal;
+  border-spacing: 3px;
+  border-color: black;
+  border-width: 1px;
+}
