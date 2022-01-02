@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-   <%- include ("../partials/header.ejs") %>
-</head>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Adam Lehavi</title>        
+    </head>
 <body>
    <nav class="navbar is-black" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="./">
-        <img src="DarkBanner.png" width="112" height="28">
+      <a class="navbar-item" href="home.html">
+        <img src="images/DarkBanner.png" width="112" height="28">
       </a>
   
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -19,7 +21,7 @@
   
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item">
+        <a class="navbar-item" href="home.html">
           Home
         </a>
   
@@ -54,7 +56,22 @@
       </div>
     </div>
   </nav>
-   <a href = "example.html" class = "button is-success">example button</a>
+  <div style="background-color: white;">
+    <div class="containter" style="padding-top: 25px; padding-bottom: 25px;">
+      <div class="content" style="margin: 4%; background-color: rgb(255, 255, 255);">
+        <p class="title is-1 is-light">
+          Purpose
+        </p>
+        <p class="is-black">
+          This website is made for me to be a testing ground. All the tools currently in use are tools I have taught myself over the past year. Currently in use are html and css (with the css using bulma). The next steps are to integrate node.js and angular.
+        </p>
+        <a href = "example.html" class = "button is-success">example button</a>
+      </div>
+    </div>
+    <button class="button1">
+      This is a button
+    </button>
+  </div>
 </body>
 </html>
     
