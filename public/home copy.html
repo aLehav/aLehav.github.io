@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+      <link rel="stylesheet" href="css/styles.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+      </script>
+      <title>Adam Lehavi</title>        
+  </head>
+  <body>
+    <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="home.html">
+          <img src="images/DarkBanner.png" width="112" height="28">
+        </a>
+    
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="home.html">
+            Home
+          </a>
+    
+          <a class="navbar-item" href="resume.html">
+            Resume
+          </a>
+    
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More
+            </a>
+    
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="passions.html">
+                Passions
+              </a>
+              <a class="navbar-item" href="experience.html">
+                Experience
+              </a>
+              <a class="navbar-item" href="past-projects.html">
+                Past Projects
+              </a>
+              <a class="navbar-item" href="connect.html">
+                Connect
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item" href="contact-me.html">
+                Contact Me
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div style="background-color: white;">
+      <div class="containter" style="padding-top: 25px; padding-bottom: 25px;">
+        <div class="content" style="margin: 4%; background-color: rgb(255, 255, 255);">
+          <p class="title is-1 is-light">
+            Purpose
+          </p>
+          <p class="is-black">
+            This website is made for me to be a testing ground. All the tools currently in use are tools I have taught myself over the past year. Currently in use are html and css (with the css using bulma). The next steps are to integrate node.js and angular.
+          </p>
+          <a href = "example.html" class = "button is-success">example button</a>
+        </div>
+      </div>
+    </div>
+    <div ng-app="">
+      <p>Name : <input type="text" ng-model="name"></p>
+      <h1>Hello {{name}}</h1>
+      <button class="button">
+        Enter
+      </button>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script> 
+    <script>
+
+      // Initialize Cloud Firestore through Firebase
+      firebase.initializeApp({
+        apiKey: "AIzaSyDg5b8uoC0l6V1vEZGObykGQILfi-GhQmY",
+        authDomain: "personal-website-b3fef.firebaseapp.com",
+        projectId: "personal-website-b3fef"
+      });
+
+      var db = firebase.firestore();
+      console.log(db);
+      
+      db.collection("lollipop-flavors").add({
+          first: "Ada",
+          last: "Lovelace",
+          born: 1815
+      })
+      .then((docRef) => {
+          console.log("Document written with ID: ", docRef.id);
+      })
+      .catch((error) => {
+          console.error("Error adding document: ", error);
+      });
+    </script>
+  </body>
+</html>

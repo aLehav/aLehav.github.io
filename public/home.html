@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script src="myApp.js"></script>
+    <script src="myCtrl.js"></script>
+
+    <title>Adam Lehavi</title> 
+    <style>
+      .input{
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        font-weight: bolder;
+        text-align: center;
+        width: 200px;
+        height: 40px;
+      }
+      html{
+        background-color: rgb(255, 230, 230);
+      }
+    </style>       
+  </head>
+  <body ng-controller="myCtrl" ng-init="initPage()">
+    <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="home.html">
+          <img src="images/DarkBanner.png" width="112" height="28">
+        </a>
+    
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="home.html">
+            Home
+          </a>
+    
+          <a class="navbar-item" href="resume.html">
+            Resume
+          </a>
+    
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More
+            </a>
+    
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="passions.html">
+                Passions
+              </a>
+              <a class="navbar-item" href="experience.html">
+                Experience
+              </a>
+              <a class="navbar-item" href="past-projects.html">
+                Past Projects
+              </a>
+              <a class="navbar-item" href="connect.html">
+                Connect
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item" href="contact-me.html">
+                Contact Me
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div style="background-color: rgb(255, 230, 230);">
+      <div class="containter" style="margin: 4%;">
+          <p class="title is-1">
+            Purpose
+          </p>
+          <p class="is-black">
+            This website is made for me to be a testing ground. All the tools currently in use are tools I have taught myself over the past year. Currently in use are html and css (with the css using bulma). The next steps are to integrate node.js and angular.
+          </p>
+          <hr>
+          <!--Angular Code Start-->
+          <div>
+            <div>
+              <input type="text" class="input" placeholder="Flavor" ng-model="flavor">
+              <input type="color" class="input" ng-model="color">
+            </div>
+            <div>
+              <button type="button" class="input mt-5" ng-click="addFlavor()">
+                <p style="text-align: center;">Save</p>
+              </button>
+            </div>
+            <hr>
+            Potential flavors are:
+            <div class="columns">
+              <div class="column">
+                <div class="box" ng-repeat="x in lollipops | orderBy : 'votes' : true track by x.id">
+                  <div class="columns">
+                    <div class="column is-four-fifths">
+                      <p class="content is-primary" style="color: {{x.color}};">
+                        <b>
+                          {{x.flavor}}
+                        </b>
+                      </p>
+                    </div>
+                    <div class="column" style="text-align: right;" >
+                      <a ng-click="upVote(x)">
+                        <span class="icon">
+                          <img src="images/up.png">
+                        </span>
+                      </a>
+
+                      {{x.votes}}
+                      <a ng-click="downVote(x)">
+                        <span class="icon">
+                          <img src="images/down.png">
+                        </span>                       
+                      </a>
+                  </div>                   
+                </div>
+              </div>
+            </div> 
+          </div>
+          <!--Angular Code Eng-->
+        </div>
+      </div>
+    </div>   
+  </body>
+</html>
