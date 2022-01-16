@@ -77,35 +77,50 @@
               </button>
             </div>
             <hr>
-            Potential flavors are:
             <div class="columns">
-              <div class="column">
-                <div class="box" ng-repeat="x in lollipops | orderBy : 'votes' : true track by x.id">
-                  <div class="columns">
-                    <div class="column is-four-fifths">
-                      <p class="content is-primary" style="color: {{x.color}};">
-                        <b>
-                          {{x.flavor}}
-                        </b>
-                      </p>
+              <div class = "column is-half">
+                <p class="title is-1">
+                  Top Flavors:
+                </p>
+                <div class="columns">
+                  <div class="column">
+                    <div class="box" ng-repeat="x in lollipops | orderBy : 'votes' : true track by x.id" style="width: 95%">
+                      <div class="columns">
+                        <div class="column is-three-fifths">
+                          <p class="title is-4">
+                            <b>
+                              {{x.flavor}}
+                            </b>
+                          </p>
+                        </div>
+                        <div class="column">
+                          <div style="text-align: right;" class="title is-4">
+                            <a ng-click="upVote(x)">
+                              <span class="icon">
+                                <img src="images/up.png">
+                              </span>
+                            </a>
+                            
+                              {{x.votes}}
+                            
+                            <a ng-click="downVote(x)">
+                              <span class="icon">
+                                <img src="images/down.png">
+                              </span>                       
+                            </a>      
+                          </div>             
+                        </div>  
+                      </div>
                     </div>
-                    <div class="column" style="text-align: right;" >
-                      <a ng-click="upVote(x)">
-                        <span class="icon">
-                          <img src="images/up.png">
-                        </span>
-                      </a>
-
-                      {{x.votes}}
-                      <a ng-click="downVote(x)">
-                        <span class="icon">
-                          <img src="images/down.png">
-                        </span>                       
-                      </a>
-                  </div>                   
+                  </div>
                 </div>
               </div>
-            </div> 
+              <div class="column">
+                <p class="title is-1">
+                  Past Flavors:
+                </p>
+              </div> 
+            </div>
           </div>
           <!--Angular Code Eng-->
         </div>
