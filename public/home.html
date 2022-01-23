@@ -10,6 +10,7 @@
 
     <script src="myApp.js"></script>
     <script src="myCtrl.js"></script>
+    <script src="myDirs.js"></script>
 
     <title>Adam Lehavi</title> 
     <style>
@@ -27,6 +28,7 @@
     </style>       
   </head>
   <body ng-controller="myCtrl" ng-init="initPage()">
+    <sub-page-one></sub-page-one>
     <nav class="navbar is-black" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="home.html">
@@ -123,9 +125,7 @@
                                 <img src="images/up.png">
                               </span>
                             </a>
-                            
-                              {{x.votes}}
-                            
+                            {{x.votes}}
                             <a ng-click="downVote(x)">
                               <span class="icon">
                                 <img src="images/down.png">
@@ -148,6 +148,6 @@
           <!--Angular Code Eng-->
         </div>
       </div>
-    </div>   
+    </div>  
   </body>
 </html>
