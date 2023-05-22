@@ -8,11 +8,11 @@
     flex-direction: column;
   }
   
-  .event.expanded {
+  /* .event.expanded {
     background-color: #fff;
     border-radius: 4px;
     padding: 10px;
-  }
+  } */
   
   .event-name {
     font-size: 20px;

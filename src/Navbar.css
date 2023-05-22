@@ -24,16 +24,31 @@
 }
 
 .navbar-item.selected {
-  background-color: #00ff4c;
   border-radius: 5px;
-  font-weight:bolder;
+  font-weight: bold;
 }
 
 .navbar-link {
   text-decoration: none;
-  color: #000000;
   font-weight: bold;
   transition: opacity 0.3s ease;
+  color: black;
+}
+
+.navbar-link.selected{
+  text-decoration: underline #000000;
+}
+
+.navbar-link.selected.data-science {
+  color: #001f3f;
+}
+
+.navbar-link.selected.research {
+  color: #430043;
+}
+
+.navbar-link.selected.software-engineering {
+  color: #002f00;
 }
 
 .navbar-link:hover {

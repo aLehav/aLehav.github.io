@@ -2,15 +2,25 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
-function Navbar() {
+function Navbar({ setSelection }) {
   const location = useLocation();
   const [selectedItem, setSelectedItem] = useState('');
 
   const handleItemClick = (filter) => {
     if (selectedItem === filter) {
       setSelectedItem('');
+      setSelection('');
     } else {
       setSelectedItem(filter);
+      if (filter === 'DataScience') {
+        setSelection('data-science');
+      } else if (filter === 'SoftwareEngineering') {
+        setSelection('software-engineering');
+      } else if (filter === 'Research') {
+        setSelection('research');
+      } else {
+        setSelection('');
+      }
     }
   };
 
@@ -18,28 +28,28 @@ function Navbar() {
     <header className="App-header">
       <nav className="navbar">
         <ul className="navbar-list">
-          <li className={`navbar-item ${selectedItem === 'Research' ? 'selected' : ''}`}>
+          <li className="navbar-item">
             <Link
               to={selectedItem === 'Research' ? '/' : `/?filter=${encodeURIComponent('Research')}`}
-              className="navbar-link"
+              className={`navbar-link ${selectedItem === 'Research' ? 'selected research' : ''}`}
               onClick={() => handleItemClick('Research')}
             >
               Research
             </Link>
           </li>
-          <li className={`navbar-item ${selectedItem === 'DataScience' ? 'selected' : ''}`}>
+          <li className="navbar-item">
             <Link
               to={selectedItem === 'DataScience' ? '/' : `/?filter=${encodeURIComponent('DataScience')}`}
-              className="navbar-link"
+              className={`navbar-link ${selectedItem === 'DataScience' ? 'selected data-science' : ''}`}
               onClick={() => handleItemClick('DataScience')}
             >
               Data Science
             </Link>
           </li>
-          <li className={`navbar-item ${selectedItem === 'SoftwareEngineering' ? 'selected' : ''}`}>
+          <li className="navbar-item">
             <Link
               to={selectedItem === 'SoftwareEngineering' ? '/' : `/?filter=${encodeURIComponent('SoftwareEngineering')}`}
-              className="navbar-link"
+              className={`navbar-link ${selectedItem === 'SoftwareEngineering' ? 'selected software-engineering' : ''}`}
               onClick={() => handleItemClick('SoftwareEngineering')}
             >
               Software Engineering

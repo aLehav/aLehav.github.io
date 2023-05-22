@@ -1,5 +1,17 @@
 .App {
     text-align: center;
-    background-color: antiquewhite;
+    background-color: rgb(37, 37, 37);
     min-height: 100vh;
+}
+
+.App.data-science{
+    background-color: #001f3f;
+}
+
+.App.research {
+    background-color: #430043;
+}
+
+.App.software-engineering {
+    background-color: #002f00;
 }

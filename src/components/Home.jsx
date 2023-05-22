@@ -11,22 +11,17 @@ function Home() {
   const filter = queryParams.filter || '';
 
   let filteredEvents = data.events;
-  let pageTitle = '';
 
   if (filter) {
     filteredEvents = data.events.filter((event) =>
       event.categories.includes(filter)
     );
-    pageTitle = filter.replace(/([A-Z])/g, ' $1').trim();
   }
 
   return (
-    <div>
-      <h1>{pageTitle}</h1>
-      <div>
+      <div style={{margin: 20}}>
         <Events events={filteredEvents} />
       </div>
-    </div>
   );
 }
 
