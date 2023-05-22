@@ -24,10 +24,10 @@
 }
 
 .navbar-item.selected {
-  background-color: #00ff6a;
+  background-color: #00ff4c;
   border-radius: 5px;
+  font-weight:bolder;
 }
-
 
 .navbar-link {
   text-decoration: none;
