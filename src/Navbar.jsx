@@ -64,6 +64,15 @@ function Navbar({ setSelection }) {
               Contact
             </Link>
           </li>
+          <li className={`navbar-item ${location.pathname === '/reading' ? 'selected' : ''}`}>
+            <Link
+              to={location.pathname === '/reading' ? '/' : '/reading'}
+              className="navbar-link"
+              onClick={() => handleItemClick('')}
+            >
+              Reading
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

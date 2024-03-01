@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Contact from './components/Contact';
+import Reading from './components/Reading';
 import Home from './components/Home';
 import Navbar from './Navbar';
 import './App.css';
@@ -18,6 +19,7 @@ function App() {
               element={<Home />}
             />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/reading" element={<Reading />} />
           </Routes>
         </div>
       </div>

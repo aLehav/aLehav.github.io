@@ -1,0 +1,23 @@
+.iframe-container {
+    display: flex;
+    justify-content: center; /* Ensures the iframes are centered in the container */
+    align-items: flex-start; /* Aligns iframes at the start of the container */
+  }
+  
+  .iframe-container iframe {
+    width: 48%; /* Sets an explicit width for each iframe */
+    height: 600px; /* Ensures a consistent height for each iframe */
+    border: none; /* Removes the border */
+  }
+  
+  @media (max-width: 768px) {
+    .iframe-container {
+      flex-direction: column; /* Stacks the iframes vertically on smaller screens */
+      align-items: center; /* Centers the iframes vertically */
+    }
+  
+    .iframe-container iframe {
+      width: 90%; /* Increases width for better readability on smaller screens */
+    }
+  }
+  
