@@ -50,3 +50,7 @@
 [class^="gr_custom_rating_"] {
   float: right;
 }
+[class^="gr_custom_review_"] {
+  padding-top: 3px;
+  font-size: 11px;
+}
