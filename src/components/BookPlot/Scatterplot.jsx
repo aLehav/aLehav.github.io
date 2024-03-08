@@ -12,13 +12,26 @@ export const Scatterplot = ({ data }) => {
   const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
   const [interactionData, setInteractionData] = useState();
 
-  // Effect to update size
   useEffect(() => {
-    if (containerRef.current) {
-      const { width, height } = containerRef.current.getBoundingClientRect();
-      setContainerSize({ width, height });
+    const observeTarget = containerRef.current;
+    if (observeTarget) {
+      const resizeObserver = new ResizeObserver(entries => {
+        if (!entries || entries.length === 0) {
+          return;
+        }
+        const { width, height } = entries[0].contentRect;
+        setContainerSize({ width, height });
+      });
+
+      resizeObserver.observe(observeTarget);
+
+      return () => {
+        if (resizeObserver) {
+          resizeObserver.disconnect();
+        }
+      };
     }
-  }, []); // Empty array means run once on mount
+  }, []);
 
   // Sort the data: bigger circles must appear at the bottom
   const sortedData = data.sort((a, b) => b.size - a.size);
