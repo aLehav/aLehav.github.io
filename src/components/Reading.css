@@ -3,43 +3,44 @@
     flex-wrap: wrap;
     background-color: black;
     color: white;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 0 10%; /* Consistent horizontal padding */
 }
 
-.reading-explanation {
-    flex: 1 1 100%; /* Takes full width on small screens */    
+.reading-explanation, .iframes-container, .text-and-diagram-container {
     padding: 20px;
-    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+    box-sizing: border-box; /* Includes padding in the width calculation */
     text-align: justify;
 }
 
+/* Flex properties for children */
 .iframes-container, .text-and-diagram-container {
     display: flex;
     flex-direction: column;
-    flex: 1 1 100%; /* Adjusts so that it takes full width below the reading explanation on smaller screens */
     align-items: center;
-    height: auto; /* Adjusts height based on the content */
+    width: 100%; /* Ensures full width on smaller screens */
 }
 
 iframe {
-    width: 90%; /* Sets a consistent width for each iframe */
-    height: 50vh; /* Adjusts height for each iframe */
-    margin: 10px 0; /* Adds some space between the iframes */
-    border: none; /* Removes the border */
+    width: 90%;
+    height: 50vh;
+    margin: 10px 0;
+    border: none;
 }
 
 @media (min-width: 769px) {  
     .reading-page {
-        flex-direction: row; /* Aligns content side by side on larger screens */
+        flex-direction: row; /* Ensures side by side layout on larger screens */
+        padding: 0 5%; /* Optional: Adjust padding for larger screens */
     }
 
-    .reading-explanation, .iframes-container, .text-and-diagram-container {
-        flex: 1; /* Each container takes half of the screen width on larger screens */
+    .iframes-container, .text-and-diagram-container {
+        flex: 1; /* Allows each section to take up an equal share of the width */
+        padding: 20px;
+        width: auto; /* Overrides width: 100% from smaller screens */
     }
 
     iframe {
-        width: 80%; /* Adjusts iframe width for better layout on larger screens */
-        height: 45vh; /* Optionally adjust the height for a balanced look */
+        width: 80%; /* Adjust for larger screens */
+        height: 45vh;
     }
 }

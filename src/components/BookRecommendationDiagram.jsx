@@ -12,7 +12,7 @@ class BookRecommendationDiagram extends Component {
   componentDidMount() {
     mermaid.initialize({
       startOnLoad: true,
-      theme: 'default',
+      theme: 'forest'
     });
 
     // Fetch the Mermaid diagram text from the static file
