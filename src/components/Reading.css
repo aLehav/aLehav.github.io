@@ -1,23 +1,45 @@
-.iframe-container {
+.reading-page {
     display: flex;
-    justify-content: center; /* Ensures the iframes are centered in the container */
-    align-items: flex-start; /* Aligns iframes at the start of the container */
-  }
-  
-  .iframe-container iframe {
-    width: 48%; /* Sets an explicit width for each iframe */
-    height: 600px; /* Ensures a consistent height for each iframe */
+    flex-wrap: wrap;
+    background-color: black;
+    color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.reading-explanation {
+    flex: 1 1 100%; /* Takes full width on small screens */    
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+    text-align: justify;
+}
+
+.iframes-container, .text-and-diagram-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%; /* Adjusts so that it takes full width below the reading explanation on smaller screens */
+    align-items: center;
+    height: auto; /* Adjusts height based on the content */
+}
+
+iframe {
+    width: 90%; /* Sets a consistent width for each iframe */
+    height: 50vh; /* Adjusts height for each iframe */
+    margin: 10px 0; /* Adds some space between the iframes */
     border: none; /* Removes the border */
-  }
-  
-  @media (max-width: 768px) {
-    .iframe-container {
-      flex-direction: column; /* Stacks the iframes vertically on smaller screens */
-      align-items: center; /* Centers the iframes vertically */
+}
+
+@media (min-width: 769px) {  
+    .reading-page {
+        flex-direction: row; /* Aligns content side by side on larger screens */
     }
-  
-    .iframe-container iframe {
-      width: 90%; /* Increases width for better readability on smaller screens */
+
+    .reading-explanation, .iframes-container, .text-and-diagram-container {
+        flex: 1; /* Each container takes half of the screen width on larger screens */
     }
-  }
-  
+
+    iframe {
+        width: 80%; /* Adjusts iframe width for better layout on larger screens */
+        height: 45vh; /* Optionally adjust the height for a balanced look */
+    }
+}
