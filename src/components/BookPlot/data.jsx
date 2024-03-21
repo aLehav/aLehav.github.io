@@ -222,4 +222,13 @@ export const data = [
     size: 176,
     color: "#18a1cd",
   },
+  {
+    name: "The Russian Soul: Selections from A Writer's Diary by Fyodor Dostoevsky",
+    author: "Fyodor Dostoevsky",
+    review: "Roped me in with the chauvinism, kept me with the antisemitism. On a real note, an incredibly compelling author who convinced me in fervors blending history and fiction on topics of death and statehood independent of not caring about the fact that it is no longer the late 1800s and I am not a Russian Christian. Would love to read more Dostoevsky, or perhaps Tolstoy or Pushkin at his recommendation. I doubt I'll ever read his full diary.",
+    x: 0.77,
+    y: 0.77,
+    size: 137,
+    color: "#c71e1d",
+  },
 ];
