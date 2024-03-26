@@ -12,6 +12,7 @@
     padding: 20px;
     padding-bottom: 0px;
     width: 100%;
+    margin: auto;
 }
 
 .reading-explanation, .iframes-container, .text-and-diagram-container {
@@ -21,38 +22,42 @@
 }
 
 /* Flex properties for children */
-.iframes-container, .text-and-diagram-container {
+.text-and-diagram-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; /* Ensures full width on smaller screens */
+    max-width: 70%;
 }
 
 .text-and-diagram-container {
     min-height: 100vh;
 }
 
-iframe {
-    width: 90%;
-    height: 50vh;
+.currently-reading {
     margin: 10px 0;
     border: none;
 }
 
 @media (min-width: 769px) {  
     .reading-page {
+        display: flex;
         flex-direction: row; /* Ensures side by side layout on larger screens */
+        align-items: flex-start; /* Align items to the start of the flex container */
         padding: 0 5%; /* Optional: Adjust padding for larger screens */
     }
 
-    .iframes-container, .text-and-diagram-container {
-        flex: 1; /* Allows each section to take up an equal share of the width */
+    .iframes-container {
+        flex: 0 0 420px; /* Do not grow, do not shrink, fixed width of 420px */
         padding: 20px;
-        width: auto; /* Overrides width: 100% from smaller screens */
+        height: auto; /* Height adjusts to content */
     }
 
-    iframe {
-        width: 80%; /* Adjust for larger screens */
-        height: 45vh;
+    .text-and-diagram-container {
+        flex-grow: 1; /* Allows this container to take up the remaining space */
+        flex-shrink: 1; /* Allow shrinking if needed, though with flex-grow: 1 it may not shrink much */
+        flex-basis: 0%; /* Start from 0% of the flex container's remaining space after assigning fixed sizes */
+        padding: 20px;
+        max-width: 70%; /* Optional, ensures it doesn't exceed the available space minus the iframe container and potential margins */
     }
 }
+
