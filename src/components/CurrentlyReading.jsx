@@ -2,25 +2,31 @@ import React from 'react';
 import './CurrentlyReading.css';
 
 const books = [
-  {
-    title: "How Not to Die: Discover the Foods Scientifically Proven to Prevent and Reverse Disease",
-    author: "Michael Greger",
-    authorLink: "https://www.goodreads.com/author/show/352513.Michael_Greger",
-    bookLink: "https://www.goodreads.com/review/show/6222290329?utm_medium=api&utm_source=custom_widget",
-  },
-  {
-    title: "The Grapes of Wrath",
-    author: "John Steinbeck",
-    authorLink: "https://www.goodreads.com/author/show/585.John_Steinbeck",
-    bookLink: "https://www.goodreads.com/review/show/6279654767?utm_medium=api&utm_source=custom_widget",
-  },
-  {
-    title: "The Russian Soul: Selections from A Writer's Diary by Fyodor Dostoevsky",
-    author: "Fyodor Dostoevsky",
-    authorLink: "https://www.goodreads.com/author/show/3137322.Fyodor_Dostoevsky",
-    bookLink: "https://www.goodreads.com/review/show/6299690718?utm_medium=api&utm_source=custom_widget",
-  },
-];
+    {
+      "title": "How Not to Die: Discover the Foods Scientifically Proven to Prevent and Reverse Disease",
+      "author": "Michael Greger",
+      "authorLink": "https://www.goodreads.com/author/show/352513.Michael_Greger",
+      "bookLink": "https://www.goodreads.com/review/show/6222290329?utm_medium=api&utm_source=custom_widget"
+    },
+    {
+      "title": "How to Read Literature Like a Professor",
+      "author": "Thomas C. Foster",
+      "authorLink": "https://www.goodreads.com/author/show/11550.Thomas_C_Foster",
+      "bookLink": "https://www.goodreads.com/review/show/6318084399?utm_medium=api&utm_source=custom_widget"
+    },
+    {
+      "title": "Lord Jim",
+      "author": "Joseph Conrad",
+      "authorLink": "https://www.goodreads.com/author/show/3345.Joseph_Conrad",
+      "bookLink": "https://www.goodreads.com/review/show/6318087761?utm_medium=api&utm_source=custom_widget"
+    },
+    {
+      "title": "The Captain's Daughter and Other Stories",
+      "author": "Alexander Pushkin",
+      "authorLink": "https://www.goodreads.com/author/show/16070.Alexander_Pushkin",
+      "bookLink": "https://www.goodreads.com/review/show/6361467331?utm_medium=api&utm_source=custom_widget"
+    }
+  ];  
 
 const CurrentlyReading = () => {
   return (
