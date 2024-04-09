@@ -231,4 +231,22 @@ export const data = [
     size: 137,
     color: "#c71e1d",
   },
+  {
+    name: "How Not to Die: Discover the Foods Scientifically Proven to Prevent and Reverse Disease",
+    author: "Michael Greger",
+    review: "Great for reframing how I think about nutrition vs. calories when buying food, but information was delivered in a dense and repetitive format. Skipped the last few chapters, I'll pass on hearing more cookbook recipes.",
+    x: 0.56,
+    y: 0.40,
+    size: 576,
+    color: "#18a1cd"
+  },
+  {
+    name: "Lord Jim",
+    author: "Joseph Conrad",
+    review: "A great novel I hated reading slightly less than Moby Dick with an incredibly interesting protagonist, unpredictable (in a good way) plot line, and means of conveying information that made the book pleasantly psychological in nature.",
+    x: 0.50,
+    y: 0.77,
+    size: 323,
+    color: "#c71e1d"
+  }
 ];

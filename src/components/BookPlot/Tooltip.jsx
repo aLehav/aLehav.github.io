@@ -26,12 +26,12 @@ export const Tooltip = ({ interactionData }) => {
 
       <div className={styles.topHalfContainer} style={{ borderColor: color }}>
         <div className={styles.row}>
-          <span>Personal Rating</span>
-          <b>{x * 100}</b>
+          <span>How Much I Liked It</span>
+          <b>{Math.round(x * 100)} / 100</b>
         </div>
         <div className={styles.row}>
-          <span>Suggested</span>
-          <b>{y * 100}</b>
+          <span>How Much I Suggest It</span>
+          <b>{Math.round(y * 100)} / 100</b>
         </div>
         <div className={styles.row}>
           <span>Pages</span>
