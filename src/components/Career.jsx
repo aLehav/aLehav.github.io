@@ -1,11 +1,10 @@
-// Home.jsx
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import queryString from 'query-string';
 import Events from './Events';
 import data from '../data.json';
 
-function Home() {
+function Career() {
   const location = useLocation();
   const queryParams = queryString.parse(location.search);
   const filter = queryParams.filter || '';
@@ -25,4 +24,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Career;
