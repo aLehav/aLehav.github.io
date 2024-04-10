@@ -244,8 +244,8 @@ export const data = [
     name: "Lord Jim",
     author: "Joseph Conrad",
     review: "A great novel I hated reading slightly less than Moby Dick with an incredibly interesting protagonist, unpredictable (in a good way) plot line, and means of conveying information that made the book pleasantly psychological in nature.",
-    x: 0.50,
-    y: 0.77,
+    x: 0.77,
+    y: 0.50,
     size: 323,
     color: "#c71e1d"
   }

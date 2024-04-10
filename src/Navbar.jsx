@@ -55,15 +55,6 @@ function Navbar({ setSelection }) {
               Software Engineering
             </Link>
           </li>
-          <li className={`navbar-item ${location.pathname === '/contact' ? 'selected' : ''}`}>
-            <Link
-              to={location.pathname === '/contact' ? '/' : '/contact'}
-              className="navbar-link"
-              onClick={() => handleItemClick('')}
-            >
-              Contact
-            </Link>
-          </li>
           <li className={`navbar-item ${location.pathname === '/reading' ? 'selected' : ''}`}>
             <Link
               to={location.pathname === '/reading' ? '/' : '/reading'}
@@ -71,6 +62,15 @@ function Navbar({ setSelection }) {
               onClick={() => handleItemClick('')}
             >
               Reading
+            </Link>
+          </li>
+          <li className={`navbar-item ${location.pathname === '/contact' ? 'selected' : ''}`}>
+            <Link
+              to={location.pathname === '/contact' ? '/' : '/contact'}
+              className="navbar-link"
+              onClick={() => handleItemClick('')}
+            >
+              Contact
             </Link>
           </li>
         </ul>
