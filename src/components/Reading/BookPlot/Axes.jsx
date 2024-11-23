@@ -63,6 +63,28 @@ export const Axes = ({ x, y, width, height }) => {
         >
           &darr;
         </text>
+
+        {/* labels for Y axis */}
+        <text
+          x={x + 10}
+          y={height - 10}
+          fill="#ababab"
+          fontSize={16}
+          textRendering={"optimizeLegibility"}
+          textAnchor="start"
+        >
+          Personally Enjoyed Reading &rarr;
+        </text>
+        <text
+          x={x - 10}
+          y={height - 10}
+          fill="#ababab"
+          fontSize={16}
+          textRendering={"optimizeLegibility"}
+          textAnchor="end"
+        >
+          &larr; Disliked Reading
+        </text>
       </g>
     );
   };

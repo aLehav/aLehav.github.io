@@ -3,18 +3,6 @@ import './CurrentlyReading.css';
 
 const books = [
     {
-      "title": "How to Read Literature Like a Professor",
-      "author": "Thomas C. Foster"
-    },
-    {
-      "title": "The Captain's Daughter and Other Stories",
-      "author": "Alexander Pushkin"
-    },
-    {
-      "title": "Fathers and Sons",
-      "author": "Ivan Turgenev"
-    },
-    {
       "title": "Talking to Strangers: What We Should Know About the People We Don't Know",
       "author": "Malcolm Gladwell"
     }

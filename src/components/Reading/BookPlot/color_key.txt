@@ -1,4 +1,7 @@
 c71e1d: Classic
-00dca6: Kafka
 fa8c00: Comedy / Post-Modern / Biographies / General
 18a1cd: Investment / Professional Development
+bdcc15: Russian
+1e26db: Biography
+c022e6: Vonnegut
+00dca6: Kafka

@@ -5,6 +5,8 @@ import Events from './Events';
 import { data } from './data';
 import './Career.css'
 
+// Idea: Make a flowchart with research and work subgroups and icons for each, that when clicked on expand and give information.
+
 function Career() {
   const location = useLocation();
   const queryParams = queryString.parse(location.search);
