@@ -9,7 +9,7 @@ export const Scatterplot = ({ data }) => {
   const containerRef = useRef(null);
 
   // State
-  const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
+  const [containerSize, setContainerSize] = useState({ width: 0, height: 550 });
   const [interactionData, setInteractionData] = useState();
 
   useEffect(() => {

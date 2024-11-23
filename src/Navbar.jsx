@@ -9,12 +9,12 @@ function Navbar({ setSelection }) {
     <header className="App-header">
       <nav className="navbar">
         <ul className="navbar-list">
-          <li className={`navbar-item ${location.pathname === '/career' ? 'selected' : ''}`}>
+          <li className={`navbar-item ${location.pathname === '/resume' ? 'selected' : ''}`}>
             <Link
-              to={location.pathname === '/career' ? '/' : '/career'}
+              to={location.pathname === '/resume' ? '/' : '/resume'}
               className="navbar-link"
             >
-              Career
+              Resume
             </Link>
           </li>
           <li className={`navbar-item ${location.pathname === '/reading' ? 'selected' : ''}`}>

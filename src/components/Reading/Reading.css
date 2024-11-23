@@ -1,63 +1,42 @@
 .reading-page {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column; /* Single-column layout */
+    align-items: center; /* Center the content */
     background-color: black;
     color: white;
-    padding: 0 10%; /* Consistent horizontal padding */
+    padding: 20px; /* Ensure consistent padding */
 }
 
-.reading-title {
-    text-align: left;
+.reading-explanation {
+    max-width: 70%; /* Limit the text width */
+    padding: 20px;
     box-sizing: border-box;
-    padding: 20px;
-    padding-bottom: 0px;
-    width: 100%;
-    margin: auto;
-}
-
-.reading-explanation, .iframes-container, .text-and-diagram-container {
-    padding: 20px;
-    box-sizing: border-box; /* Includes padding in the width calculation */
     text-align: justify;
 }
 
-/* Flex properties for children */
+/* The container for the scatterplot ensures it takes full width */
 .text-and-diagram-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 70%;
-}
-
-.text-and-diagram-container {
+    width: 100%; /* Full width for scatterplot */
     min-height: 100vh;
 }
 
-.currently-reading {
-    margin: 10px 0;
-    border: none;
+.text-and-diagram-container .reading-explanation {
+    margin-bottom: 20px; /* Add spacing between text sections */
 }
+/* 
+/* Scatterplot adjustments */
+
 
 @media (min-width: 769px) {  
     .reading-page {
         display: flex;
-        flex-direction: row; /* Ensures side by side layout on larger screens */
         align-items: flex-start; /* Align items to the start of the flex container */
         padding: 0 5%; /* Optional: Adjust padding for larger screens */
     }
-
-    .iframes-container {
-        flex: 0 0 420px; /* Do not grow, do not shrink, fixed width of 420px */
-        padding: 20px;
-        height: auto; /* Height adjusts to content */
-    }
-
     .text-and-diagram-container {
         flex-grow: 1; /* Allows this container to take up the remaining space */
-        flex-shrink: 1; /* Allow shrinking if needed, though with flex-grow: 1 it may not shrink much */
         flex-basis: 0%; /* Start from 0% of the flex container's remaining space after assigning fixed sizes */
         padding: 20px;
         max-width: 70%; /* Optional, ensures it doesn't exceed the available space minus the iframe container and potential margins */
     }
 }
-
