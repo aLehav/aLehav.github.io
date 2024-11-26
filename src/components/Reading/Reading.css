@@ -11,7 +11,7 @@
     max-width: 70%; /* Limit the text width */
     padding: 20px;
     box-sizing: border-box;
-    text-align: justify;
+    text-align: left;
 }
 
 /* The container for the scatterplot ensures it takes full width */
