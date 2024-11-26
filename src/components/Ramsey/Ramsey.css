@@ -1,0 +1,17 @@
+.ramsey-page {
+    display: flex;
+    flex-direction: column; /* Single-column layout */
+    align-items: left; /* Center the content */
+    background-color: black;
+    color: white;
+    padding: 20px; /* Ensure consistent padding */
+    margin-left: 5%;
+    box-sizing: border-box;
+    text-align: left;
+    width: 100%;
+    max-width: 70%;
+    > a {
+        color:cornsilk
+    }
+}
+    

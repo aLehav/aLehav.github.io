@@ -4,35 +4,32 @@ import './Navbar.css';
 
 function Navbar({ setSelection }) {
   const location = useLocation();
+
+  const navItems = [
+    { path: '/resume', label: 'Resume' },
+    { path: '/reading', label: 'Reading' },
+    { path: '/ramsey-theory', label: 'Ramsey Theory' },
+    { path: '/antisemitism', label: 'Antisemitism' },
+    { path: '/contact', label: 'Contact' },
+  ];
   
   return (
     <header className="App-header">
       <nav className="navbar">
         <ul className="navbar-list">
-          <li className={`navbar-item ${location.pathname === '/resume' ? 'selected' : ''}`}>
+        {navItems.map(({ path, label }) => (
+          <li
+            key={path}
+            className={`navbar-item ${location.pathname === path ? 'selected' : ''}`}
+          >
             <Link
-              to={location.pathname === '/resume' ? '/' : '/resume'}
+              to={location.pathname === path ? '/' : path}
               className="navbar-link"
             >
-              Resume
+              {label}
             </Link>
           </li>
-          <li className={`navbar-item ${location.pathname === '/reading' ? 'selected' : ''}`}>
-            <Link
-              to={location.pathname === '/reading' ? '/' : '/reading'}
-              className="navbar-link"
-            >
-              Reading
-            </Link>
-          </li>
-          <li className={`navbar-item ${location.pathname === '/contact' ? 'selected' : ''}`}>
-            <Link
-              to={location.pathname === '/contact' ? '/' : '/contact'}
-              className="navbar-link"
-            >
-              Contact
-            </Link>
-          </li>
+        ))}
         </ul>
       </nav>
     </header>
