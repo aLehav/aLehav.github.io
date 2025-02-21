@@ -12,6 +12,7 @@
     padding: 20px;
     box-sizing: border-box;
     text-align: left;
+    padding-bottom: 0%;
 }
 
 /* The container for the scatterplot ensures it takes full width */
@@ -19,12 +20,6 @@
     width: 100%; /* Full width for scatterplot */
     min-height: 100vh;
 }
-
-.text-and-diagram-container .reading-explanation {
-    margin-bottom: 20px; /* Add spacing between text sections */
-}
-/* 
-/* Scatterplot adjustments */
 
 
 @media (min-width: 769px) {  

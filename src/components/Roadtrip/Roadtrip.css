@@ -1,4 +1,4 @@
-.antisemitism-page {
+.content-page {
     display: flex;
     flex-direction: column; /* Single-column layout */
     align-items: left; /* Center the content */
@@ -11,6 +11,8 @@
     width: 100%;
     max-width: 70%;
     > a {
-        color:cornsilk
+        color:rgb(191, 229, 255);
+        padding-bottom: 10px;
+        font-weight: bold;
     }
 }

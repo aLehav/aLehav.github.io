@@ -8,8 +8,7 @@ function Navbar({ setSelection }) {
   const navItems = [
     { path: '/resume', label: 'Resume' },
     { path: '/reading', label: 'Reading' },
-    { path: '/ramsey-theory', label: 'Ramsey Theory' },
-    { path: '/antisemitism', label: 'Antisemitism' },
+    { path: '/research', label: 'Research' },
     { path: '/contact', label: 'Contact' },
   ];
   

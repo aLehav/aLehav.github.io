@@ -12,7 +12,7 @@ export const data = [
   {
     name: "Cat's Cradle", author: "Kurt Vonnegut Jr.",
     review: "Comedically charming, best book I've read that can easily be classified as post modern, highly recommend to anyone with a free 4-5 hours.",
-    x: 0.78, y: 0.70, size: 179, color: "#c022e6",
+    x: 0.78, y: 0.70, size: 179, color: "#00dca6",
   },
   {
     name: "The Sons", author: "Franz Kafka",
@@ -22,7 +22,7 @@ export const data = [
   {
     name: "Steve Jobs", author: "Walter Isaacson",
     review: "Amazing book. Still never going to buy an Apple device. Glimpse into a man who acts like a piece of shit but definitely becomes more than just a person in this world.",
-    x: 0.87, y: 0.77, size: 630, color: "#1e26db",
+    x: 0.87, y: 0.77, size: 630, color: "#fa8c00",
   },
   {
     name: "Zero to One: Notes on Startups, or How to Build the Future", author: "Peter Thiel",
@@ -32,7 +32,7 @@ export const data = [
   {
     name: "A Very Punchable Face", author: "Colin Jost",
     review: "It's aight.",
-    x: 0.67, y: 0.40, size: 312, color: "#1e26db",
+    x: 0.67, y: 0.40, size: 312, color: "#fa8c00",
   },
   {
     name: "The Grapes of Wrath", author: "John Steinbeck",
@@ -125,7 +125,7 @@ export const data = [
   {
     name: "The Russian Soul: Selections from A Writer's Diary by Fyodor Dostoevsky", author: "Fyodor Dostoevsky",
     review: "Roped me in with the chauvinism, kept me with the antisemitism. On a real note, an incredibly compelling author who convinced me in fervors blending history and fiction on topics of death and statehood independent of not caring about the fact that it is no longer the late 1800s and I am not a Russian Christian. Would love to read more Dostoevsky, or perhaps Tolstoy or Pushkin at his recommendation. I doubt I'll ever read his full diary.",
-    x: 0.77, y: 0.77, size: 137, color: "#bdcc15",
+    x: 0.77, y: 0.77, size: 137, color: "#c71e1d",
   },
   {
     name: "How Not to Die: Discover the Foods Scientifically Proven to Prevent and Reverse Disease", author: "Michael Greger",
@@ -140,7 +140,7 @@ export const data = [
   {
     name: "Fathers and Sons", author: "Ivan Turgenev",
     review: "An interesting read, especially when situated in its historical context. Generational themes discussed still ring true, well-polished but not outstanding in any particular regard..",
-    x: 0.83, y: 0.67, size: 200, color: "#bdcc15"
+    x: 0.83, y: 0.67, size: 200, color: "#c71e1d"
   },
   {
     name: "Amerika", author: "Franz Kafka",
@@ -165,12 +165,12 @@ export const data = [
   {
     name: "The Devils", author: "Fyodor Dostoevsky",
     review: "When I started this book, I was in a happy relationship. I finish it no longer in a relationship, unhappy with work, and in a much better position to consume Russian literature. In all honesty, the general slowness with which I read this work definitely affected my perception of it, but I was incredibly surprised by how little I enjoyed it. I would love to read another Dostoevsky work, but not for a few months.",
-    x: 0.32, y: 0.20, size: 704, color: "#bdcc15"
+    x: 0.32, y: 0.20, size: 704, color: "#c71e1d"
   },
   {
     name: "Slaughterhouse-Five", author: "Kurt Vonnegut Jr.",
     review: "Witty and emotional. Sad I didn't read it in high school but a fast and pleasant way to get my mind racing about aging, war, and the absurdity of life. So it goes.",
-    x: 0.78, y: 0.86, size: 275, color: "#c022e6"
+    x: 0.78, y: 0.86, size: 275, color: "#00dca6"
   },
   {
     name: "The Old Man and the Sea", author: "Ernest Hemingway",
@@ -185,11 +185,21 @@ export const data = [
   {
     name: "Benjamin Franklin: An American Life", author: "Walter Isaacson",
     review: "A generally slow book. Interesting life and well written, but when compared to Steve Jobs, the story is told more reductively with more of a focus on facts than a personality.",
-    x: 0.55, y: 0.61, size: 586, color: "#1e26db"
+    x: 0.55, y: 0.61, size: 586, color: "#fa8c00"
   },
   {
     name: "Welcome to the Monkey House", author: "Kurt Vonnegut Jr.",
     review: "Literally perfect.",
-    x: 1.00, y: 0.95, size: 331, color: "#c022e6"
+    x: 1.00, y: 0.95, size: 331, color: "#00dca6"
+  },
+  {
+    name: "God Bless You, Mr. Rosewater", author: "Kurt Vonnegut Jr.",
+    review: "Thought provoking and disturbing in a wonderful way.",
+    x: 0.94, y: 0.91, size: 290, color: "#00dca6"
+  },
+  {
+    name: "The Gambler", author: "Fyodor Dostoevsky",
+    review: "One man's roulette is another man's day trading. Brilliant novel, each chapter leaves you excited for the next, would highly recommend to anyone whose been addicted to anything.",
+    x: 0.84, y: 0.77, size: 188, color: "#c71e1d",
   }
 ];
