@@ -3,7 +3,7 @@ import './Research.css'
 
 function Research() {
   return (
-    <container className="two-col">
+    <div className="two-col">
       <div className="content-page">
         <h1>What is Ramsey Theory</h1>
         Ramsey theory is a field of combinatorics dealing with the emergence of order in systems of chaos. It explores this through the guaranteed existence of certain structures within all graphs of a minimum size or greater. This topic was first introduced to me in a combinatorics course, and I very quickly grew attached to it. I've mainly worked on attempting to find new counterexamples, which disproves the guarantee of certain structures for an assumed minimum value. 
@@ -29,7 +29,7 @@ function Research() {
         <br />
         While my current focus is on campus newspapers, I hope to branch out into mainstream media and social media in the future.
       </div>
-    </container>
+    </div>
   );
 }
 

@@ -9,6 +9,7 @@ function Navbar({ setSelection }) {
     { path: '/resume', label: 'Resume' },
     { path: '/reading', label: 'Reading' },
     { path: '/research', label: 'Research' },
+    { path: '/roadtrip', label: 'Roadtrip' },
     { path: '/contact', label: 'Contact' },
   ];
   
