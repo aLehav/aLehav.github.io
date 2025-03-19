@@ -62,9 +62,10 @@ const RoadtripMap = () => (
 function Roadtrip() {
     return (
         <div className='content-page'>
-            From May to December, I will be going on a roadtrip across all 50 states and almost all national parks. This is where I'll be documenting my thoughts and adventures for friends and family to see.
+            From May to December, I will be going on a roadtrip across all 50 states and almost all national parks. This is where I'll be documenting my thoughts and adventures for friends and family to see. The outline of the trip is in the embedded map. Ignore the letters, they're a consequence of My Maps being a bad tool. I'm starting in LA, going down south, up the east coast, along the northeast, sweeping back down for Utah and Colorado, and then cutting through Canada to go up to Alaska via Montana and back down through Washington.
 
-            <div style={{"height":"500px"}}><RoadtripMap/></div>
+            {/* <div style={{"height":"500px"}}><RoadtripMap/></div> */}
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1q-3kpkxRgedxqI5yc1HgAcgUMMuBOg8&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
         </div>
         
     );
