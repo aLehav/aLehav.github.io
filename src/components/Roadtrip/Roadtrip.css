@@ -17,10 +17,35 @@
     }
 }
 
-Map {
-    height: 500px;
+iframe {
+    padding: 20px;
+    border: none;
+    display: block;
+    margin: 0 auto;
 }
 
-iframe {
-    padding: 10px;
+.roadtrip-intro {
+    margin-bottom: 40px;
+}
+
+.roadtrip-intro h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.map-container {
+    margin: 30px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blogs-section {
+    margin-top: 40px;
+}
+
+.blogs-section h2 {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
 }
