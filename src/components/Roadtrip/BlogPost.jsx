@@ -23,7 +23,12 @@ function BlogPost({ post }) {
       </div>
 
       <div className="blog-content">
-        {post.content}
+        {post.content.split('\n').map((line, index) => (
+          <React.Fragment key={index}>
+            {line}
+            <br />
+          </React.Fragment>
+        ))}
       </div>
       
       {post.images.length > 0 && (
