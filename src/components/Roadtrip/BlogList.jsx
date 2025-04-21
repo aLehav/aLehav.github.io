@@ -11,7 +11,10 @@ function BlogList({ posts, allowedTags }) {
       (post.city?.toLowerCase().includes(filter.toLowerCase()) || false) ||
       (post.content?.toLowerCase().includes(filter.toLowerCase()) || false);
   
-    const hasAllowedTag = post.tags?.some(tag => allowedTags.includes(tag)) || false;
+    let hasAllowedTag = true;
+    if (post.tags && post.tags.length > 0) {
+      hasAllowedTag = post.tags.some(tag => allowedTags.includes(tag));
+    }
   
     return matchesFilter && hasAllowedTag;
   });  
