@@ -2,14 +2,19 @@ import React, { useState } from 'react';
 import BlogPost from './BlogPost';
 import './BlogList.css';
 
-function BlogList({ posts }) {
+function BlogList({ posts, allowedTags }) {
   const [filter, setFilter] = useState('');
   
-  const filteredPosts = posts.filter(post => 
-    post.title.toLowerCase().includes(filter.toLowerCase()) ||
-    post.city.toLowerCase().includes(filter.toLowerCase()) ||
-    post.content.toLowerCase().includes(filter.toLowerCase())
-  );
+  const filteredPosts = posts.filter(post => {
+    const matchesFilter = 
+      (post.title?.toLowerCase().includes(filter.toLowerCase()) || false) ||
+      (post.city?.toLowerCase().includes(filter.toLowerCase()) || false) ||
+      (post.content?.toLowerCase().includes(filter.toLowerCase()) || false);
+  
+    const hasAllowedTag = post.tags?.some(tag => allowedTags.includes(tag)) || false;
+  
+    return matchesFilter && hasAllowedTag;
+  });  
   
   return (
     <div className="blog-list">

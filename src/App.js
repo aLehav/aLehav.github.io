@@ -4,7 +4,7 @@ import Contact from './components/Contact/Contact';
 import Reading from './components/Reading/Reading';
 import Research from './components/Research/Research';
 import Resume from './components/Resume/Resume';
-import Roadtrip from './components/Roadtrip/Roadtrip.tsx';
+import Roadtrip from './components/Roadtrip/Roadtrip';
 import Navbar from './Navbar';
 import './App.css';
 
