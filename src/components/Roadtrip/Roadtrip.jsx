@@ -20,15 +20,16 @@ function Roadtrip() {
     }, []);
 
     useEffect(() => {
-    if (userEmail) {
-        console.log("User email is %s", userEmail)
         const fetchPermissions = async () => {
-        const docRef = doc(db, 'access-control', userEmail);
-        const docSnap = await getDoc(docRef);
-        setAllowedTags(docSnap.exists() ? docSnap.data().allowedTags : []);
+            if (userEmail) {
+            const docRef = doc(db, 'access-control', userEmail);
+            const docSnap = await getDoc(docRef);
+            setAllowedTags(docSnap.exists() ? docSnap.data().allowedTags : []);
+            } else {
+            setAllowedTags([]);
+            }
         };
         fetchPermissions();
-    }
     }, [userEmail]);
 
     return (
