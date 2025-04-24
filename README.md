@@ -9,3 +9,5 @@ This repository is an intermediary personal site for Adam Lehavi. It tracks his 
 ## Updating Changes
 
 `npm run deploy`
+
+`firebase deploy`

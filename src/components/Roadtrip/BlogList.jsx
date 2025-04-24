@@ -6,18 +6,12 @@ function BlogList({ posts, allowedTags }) {
   const [filter, setFilter] = useState('');
   
   const filteredPosts = posts.filter(post => {
-    const matchesFilter = 
-      (post.title?.toLowerCase().includes(filter.toLowerCase()) || false) ||
-      (post.city?.toLowerCase().includes(filter.toLowerCase()) || false) ||
-      (post.content?.toLowerCase().includes(filter.toLowerCase()) || false);
-  
-    let hasAllowedTag = true;
-    if (post.tags && post.tags.length > 0) {
-      hasAllowedTag = post.tags.some(tag => allowedTags.includes(tag));
-    }
-  
-    return matchesFilter && hasAllowedTag;
-  });  
+    return (
+      post.title?.toLowerCase().includes(filter.toLowerCase()) ||
+      post.city?.toLowerCase().includes(filter.toLowerCase()) ||
+      post.content?.toLowerCase().includes(filter.toLowerCase())
+    );
+  });
   
   return (
     <div className="blog-list">

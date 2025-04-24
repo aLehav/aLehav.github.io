@@ -3,6 +3,7 @@ import { getFirestore, doc, getDoc, getDocs, collection } from 'firebase/firesto
 import BlogList from './BlogList';
 import Auth from '../Auth';
 import { db } from '../firebase'
+import { query, where } from 'firebase/firestore';
 import './Roadtrip.css';
 
 function Roadtrip() {
@@ -11,26 +12,40 @@ function Roadtrip() {
     const [blogPosts, setBlogPosts] = useState([]);
 
     useEffect(() => {
-    const fetchPosts = async () => {
-        const querySnapshot = await getDocs(collection(db, 'blog-posts'));
-        const posts = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-        setBlogPosts(posts);
-    };
-    fetchPosts();
-    }, []);
-
-    useEffect(() => {
-        const fetchPermissions = async () => {
-            if (userEmail) {
+        const fetchPermissionsAndPosts = async () => {
+          let untaggedPosts = [];
+          let taggedPosts = [];
+      
+          // Always fetch posts with no tags
+          const allPostsSnapshot = await getDocs(collection(db, 'blog-posts'));
+          untaggedPosts = allPostsSnapshot.docs
+            .map(doc => ({ id: doc.id, ...doc.data() }))
+            .filter(post => !post.tags || post.tags.length === 0);
+      
+          if (userEmail) {
             const docRef = doc(db, 'access-control', userEmail);
             const docSnap = await getDoc(docRef);
-            setAllowedTags(docSnap.exists() ? docSnap.data().allowedTags : []);
-            } else {
-            setAllowedTags([]);
+            const tags = docSnap.exists() ? docSnap.data().allowedTags : [];
+            setAllowedTags(tags);
+      
+            if (tags.length > 0) {
+              const postsQuery = query(
+                collection(db, 'blog-posts'),
+                where('tags', 'array-contains-any', tags.slice(0, 10)) // limit to 10
+              );
+              const querySnapshot = await getDocs(postsQuery);
+              taggedPosts = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
             }
+          } else {
+            setAllowedTags([]);
+          }
+      
+          // Merge posts (untagged first, then tagged)
+          setBlogPosts([...untaggedPosts, ...taggedPosts]);
         };
-        fetchPermissions();
-    }, [userEmail]);
+      
+        fetchPermissionsAndPosts();
+      }, [userEmail]);
 
     return (
         <div className='content-page'>
@@ -41,7 +56,7 @@ function Roadtrip() {
 
             <div className="blogs-section">
                 <h1>Travel Blog</h1>
-                <BlogList posts={blogPosts} allowedTags={allowedTags}/>
+                <BlogList posts={blogPosts} />
             </div>
         </div>
         
