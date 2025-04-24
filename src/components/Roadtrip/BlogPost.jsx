@@ -11,13 +11,19 @@ function BlogPost({ post }) {
   const prevImage = () => {
     setCurrentImage((prev) => (prev - 1 + post.images.length) % post.images.length);
   };
+
+  const formatDate = (date) => {
+    if (date?.seconds) return new Date(date.seconds * 1000).toLocaleDateString();
+    if (typeof date === 'string' || typeof date === 'number') return new Date(date).toLocaleDateString();
+    return '';
+  };  
   
   return (
     <div className="blog-post">
       <div className="blog-header">
         <h2 className="blog-title">{post.title}</h2>
         <div className="blog-meta">
-          <span className="blog-date">{post.date}</span>
+          <span className="blog-date">{formatDate(post.date)}</span>
           <span className="blog-city">{post.city}</span>
         </div>
       </div>
