@@ -102,11 +102,11 @@ function Resume() {
         <div className="item">
           <div className="item-header">
             <div className="item-title">Scope Club Member, USC</div>
-            <div className="item-date">Sep 2021 – Present</div>
+            <div className="item-date">Sep 2021 – May 2025</div>
           </div>
           <div className="item-description">
             <ul>
-              <li>Won Spring 2023 hackathon as full stack developer working on a React backend with Firebase and Spotify API integration</li>
+              <li>Won Spring 2023 hackathon as full stack developer using React with Firebase and Spotify API integration</li>
             </ul>
           </div>
         </div>
@@ -114,11 +114,11 @@ function Resume() {
         <div className="item">
           <div className="item-header">
             <div className="item-title">TAMID Director of Financial Consulting, USC</div>
-            <div className="item-date">Sep 2021 – Present</div>
+            <div className="item-date">Sep 2021 – Dec 2024</div>
           </div>
           <div className="item-description">
             <ul>
-              <li>Provide financial valuation and modeling directly for Israeli startups, aiming for growth from a VC perspective</li>
+              <li>Provided financial valuation and modeling directly for Israeli startups, aiming for growth from a VC perspective</li>
             </ul>
           </div>
         </div>
@@ -130,6 +130,7 @@ function Resume() {
           </div>
           <div className="item-description">
             <ul>
+              <li>Authored "Ramsey Number Counterexample Checking and One Vertex Extension Linearly Related to s and t", submitted to E-JC</li>
               <li>Coauthored "RamseyRL: A Framework for Intelligent Ramsey Number Counterexample Searching", submitted to AAAI 2024</li>
             </ul>
           </div>
@@ -138,11 +139,11 @@ function Resume() {
         <div className="item">
           <div className="item-header">
             <div className="item-title">Lollipop Hobbyist</div>
-            <div className="item-date">Dec 2019 – Present</div>
+            <div className="item-date">Dec 2019 – Dec 2022</div>
           </div>
           <div className="item-description">
             <ul>
-              <li>Sell lollipops to students at 5+ colleges, having made over $4000 in profit</li>
+              <li>Sold lollipops to students at 5 colleges, having made over $4000 in profit</li>
             </ul>
           </div>
         </div>
@@ -155,8 +156,8 @@ function Resume() {
           <div className="skill-category">
             <div className="skill-category-title">Programs & Frameworks</div>
             <ul className="skill-list">
-              <li className="skill-item">Python, SQL, JavaScript, C++, Java, R, LaTeX, HTML, CSS, Excel, Firebase, C</li>
-              <li className="skill-item">PyTorch, TensorFlow, SciKit, Hugging Face, Optuna, React, Node.js, Angular, Django, Bulma, Bootstrap, NoSQL</li>
+              <li className="skill-item">Python, SQL, JavaScript, C++, Java, R, LaTeX, HTML, CSS, Excel, Firebase, GCP, C</li>
+              <li className="skill-item">PyTorch, TensorFlow, SciKit, Optuna, React, Node.js, Django, Bootstrap, Scrapy, BeautifulSoup</li>
             </ul>
           </div>
           

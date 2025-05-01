@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Sidebar from './components/Sidebar';
-import About from './components/About';
-import Resume from './components/Resume';
+import About from './pages/About';
+import Resume from './pages/Resume';
 import Research from './components/Research/Research';
 import Reading from './components/Reading/Reading';
 import Roadtrip from './components/Roadtrip/Roadtrip';
-import Contact from './components/Contact';
+import Contact from './pages/Contact';
 
 function App() {
   // You can use this state to change theme if needed

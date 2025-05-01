@@ -180,6 +180,24 @@
   .item-description {
     text-align: justify;
   }
+
+  /* Fix list indentation in resume */
+.item-description ul {
+  list-style-type: disc;
+  padding-left: 2rem; /* Increased padding */
+  margin-bottom: 0.5rem;
+}
+
+.item-description li {
+  text-align: left;
+  margin-bottom: 0.3rem;
+  padding-left: 0; /* Remove previous padding */
+}
+
+/* Remove any conflicting bullet styles */
+.item-description li::before {
+  display: none; /* Remove any existing custom bullets */
+}
   
   /* Skills section */
   .skills-container {
