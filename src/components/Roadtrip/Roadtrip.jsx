@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getFirestore, doc, getDoc, getDocs, collection } from 'firebase/firestore';
+import { doc, getDoc, getDocs, collection } from 'firebase/firestore';
 import BlogList from './BlogList';
 import Auth from '../Auth';
 import { db } from '../firebase'
@@ -8,25 +8,25 @@ import './Roadtrip.css';
 
 function Roadtrip() {
     const [userEmail, setUserEmail] = useState(null);
-    const [allowedTags, setAllowedTags] = useState([]);
     const [blogPosts, setBlogPosts] = useState([]);
 
     useEffect(() => {
         const fetchPermissionsAndPosts = async () => {
-          let untaggedPosts = [];
-          let taggedPosts = [];
+          let publicPosts = [];
+          let privatePosts = [];
       
-          // Always fetch posts with no tags
-          const allPostsSnapshot = await getDocs(collection(db, 'blog-posts'));
-          untaggedPosts = allPostsSnapshot.docs
-            .map(doc => ({ id: doc.id, ...doc.data() }))
-            .filter(post => !post.tags || post.tags.length === 0);
-      
+          // Always fetch posts with public tag
+          const postsQuery = query(
+            collection(db, 'blog-posts'),
+            where('tags', 'array-contains', 'public')
+          );
+          const querySnapshot = await getDocs(postsQuery);
+          publicPosts = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+          
           if (userEmail) {
             const docRef = doc(db, 'access-control', userEmail);
             const docSnap = await getDoc(docRef);
             const tags = docSnap.exists() ? docSnap.data().allowedTags : [];
-            setAllowedTags(tags);
       
             if (tags.length > 0) {
               const postsQuery = query(
@@ -34,14 +34,11 @@ function Roadtrip() {
                 where('tags', 'array-contains-any', tags.slice(0, 10)) // limit to 10
               );
               const querySnapshot = await getDocs(postsQuery);
-              taggedPosts = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+              privatePosts = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
             }
-          } else {
-            setAllowedTags([]);
-          }
-      
-          // Merge posts (untagged first, then tagged)
-          setBlogPosts([...untaggedPosts, ...taggedPosts]);
+          } 
+
+          setBlogPosts([...publicPosts, ...privatePosts]);
         };
       
         fetchPermissionsAndPosts();

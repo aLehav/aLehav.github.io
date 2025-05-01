@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import BlogPost from './BlogPost';
 import './BlogList.css';
 
-function BlogList({ posts, allowedTags }) {
+function BlogList({ posts }) {
   const [filter, setFilter] = useState('');
   
   const filteredPosts = posts
