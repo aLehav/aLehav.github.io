@@ -1,28 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Contact from './components/Contact/Contact';
-import Reading from './components/Reading/Reading';
-import Research from './components/Research/Research';
-import Resume from './components/Resume/Resume';
-import Roadtrip from './components/Roadtrip/Roadtrip';
-import Navbar from './Navbar';
 import './App.css';
+import Sidebar from './components/Sidebar';
+import About from './components/About';
+import Resume from './components/Resume';
+import Research from './components/Research/Research';
+import Reading from './components/Reading/Reading';
+import Roadtrip from './components/Roadtrip/Roadtrip';
+import Contact from './components/Contact';
 
 function App() {
+  // You can use this state to change theme if needed
+  const [theme, setTheme] = useState('default');
+  
   return (
     <Router>
-      <div className="App">
-        <Navbar />
-        <div className="content">
+      <div className={`App ${theme}`}>
+        <Sidebar />
+        <main className="content">
           <Routes>
-            <Route path="/" element={<Resume />} />
+            <Route path="/" element={<About />} />
             <Route path="/resume" element={<Resume />} />
-            <Route path="/reading" element={<Reading />} />
             <Route path="/research" element={<Research />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/reading" element={<Reading />} />
             <Route path="/roadtrip" element={<Roadtrip />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
-        </div>
+          {/* <footer className="footer">
+            <p>Last updated: April 2025 • Built with LaTeX styling</p>
+          </footer> */}
+        </main>
       </div>
     </Router>
   );

@@ -32,6 +32,6 @@
         flex-grow: 1; /* Allows this container to take up the remaining space */
         flex-basis: 0%; /* Start from 0% of the flex container's remaining space after assigning fixed sizes */
         padding: 20px;
-        max-width: 70%; /* Optional, ensures it doesn't exceed the available space minus the iframe container and potential margins */
+        /* max-width: 70%; Optional, ensures it doesn't exceed the available space minus the iframe container and potential margins */
     }
 }

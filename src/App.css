@@ -1,17 +1,356 @@
-.App {
-    text-align: center;
-    background-color: rgb(0, 0, 0);
+:root {
+    --sidebar-width: 220px;
+    --primary-color: #1a1a1a;
+    --secondary-color: #f5f5f5;
+    --accent-color: #6c6c6c;
+    --link-color: #0366d6;
+    --font-main: 'Computer Modern Serif', Georgia, serif;
+    --font-mono: 'Computer Modern Typewriter', monospace;
+  }
+  
+  @font-face {
+    font-family: 'Computer Modern Serif';
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/computer-modern/0.1.2/cmunrm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Computer Modern Typewriter';
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/computer-modern/0.1.2/cmuntt.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+  }
+  
+  .App {
+    text-align: left;
+    background-color: var(--secondary-color);
     min-height: 100vh;
-}
+    display: flex;
+    color: var(--primary-color);
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 2rem 1rem;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid var(--accent-color);
+  }
+  
+  .sidebar-header {
+    margin-bottom: 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 1rem;
+  }
+  
+  .sidebar-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+  }
+  
+  .sidebar-title {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    font-style: italic;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+  }
+  
+  .nav-item {
+    margin-bottom: 0.75rem;
+  }
+  
+  .nav-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    padding: 0.5rem;
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+  }
+  
+  .nav-link:hover, .nav-link.active {
+    border-left: 3px solid var(--secondary-color);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Main content styles */
+  .content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    padding: 3rem;
+    max-width: 900px;
+  }
+  
+  .page-title {
+    font-weight: normal;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--accent-color);
+    font-size: 2.5rem;
+  }
+  
+  .section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .section-title {
+    font-weight: normal;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.25rem;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+    text-align: justify;
+    font-size: 1.1rem;
+  }
 
-.App.data-science{
-    background-color: #000a14;
-}
-
-.App.research {
-    background-color: #140014;
-}
-
-.App.software-engineering {
-    background-color: #001100;
-}
+  /* Link styles that match the theme */
+ a {
+    color: var(--link-color); /* Uses the existing link color variable */
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  
+  .section a {
+    font-family: var(--font-main);
+    display: inline-block;
+    margin: 0.5rem 0;
+  }
+  
+  .footer {
+    margin-top: 4rem;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    text-align: center;
+    border-top: 1px solid var(--accent-color);
+    padding-top: 1rem;
+  }
+  
+  /* Generic item styles (for resume, projects, etc.) */
+  .item {
+    margin-bottom: 1.5rem;
+  }
+  
+  .item-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  .item-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .item-date {
+    font-style: italic;
+    color: var(--accent-color);
+  }
+  
+  .item-subtitle {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+  
+  .item-description {
+    text-align: justify;
+  }
+  
+  /* Skills section */
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .skill-category {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .skill-category-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+  }
+  
+  .skill-list {
+    list-style-type: none;
+  }
+  
+  .skill-item {
+    margin-bottom: 0.25rem;
+    padding-left: 1rem;
+    position: relative;
+  }
+  
+  .skill-item::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+  }
+  
+  /* Contact section */
+  .intro-text {
+    margin-bottom: 2rem;
+  }
+  
+  .contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .contact-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+  }
+  
+  .info {
+    flex: 1;
+  }
+  
+  .label {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .value {
+    font-family: var(--font-mono);
+    color: var(--link-color);
+  }
+  
+  .value a {
+    color: var(--link-color);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--link-color);
+  }
+  
+  .value a:hover {
+    border-bottom: 1px solid var(--link-color);
+  }
+  
+  .note-box {
+    font-style: italic;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-left: 3px solid var(--accent-color);
+    margin-bottom: 2rem;
+  }
+  
+  .mono-text {
+    font-family: var(--font-mono);
+  }
+  
+  /* Button styles */
+  .button {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    transition: background-color 0.2s;
+  }
+  
+  .button:hover {
+    background-color: var(--accent-color);
+  }
+  
+  /* LaTeX-specific styles */
+  .theorem, .definition {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-left: 3px solid var(--accent-color);
+  }
+  
+  .theorem-title, .definition-title {
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+  
+  .equation {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .App {
+      flex-direction: column;
+    }
+    
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      padding: 1rem;
+    }
+    
+    .content {
+      margin-left: 0;
+      padding: 1.5rem;
+    }
+    
+    .item-header {
+      flex-direction: column;
+    }
+    
+    .contact-item {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.5rem;
+    }
+  }
