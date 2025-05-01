@@ -8,7 +8,7 @@ function Contact() {
       <h1 className="page-title">Contact Information</h1>
       
       <div className="intro-text">
-        <p>Feel free to reach out to me through any of the following platforms. I'm always open to discussing research opportunities, collaborations, or work opportunities.</p>
+        <p>Feel free to reach out to me through any of the following platforms!</p>
       </div>
       
       <div className="contact-list">

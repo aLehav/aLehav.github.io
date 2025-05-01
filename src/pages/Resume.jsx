@@ -170,7 +170,6 @@ function Resume() {
         </div>
       </section>
       
-      {/* PDF Option */}
       <section className="section">
         <h2 className="section-title">Download Resume</h2>
         <p>You can also view or download my complete resume as a PDF:</p>

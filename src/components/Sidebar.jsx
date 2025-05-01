@@ -7,9 +7,10 @@ function Sidebar() {
   const navItems = [
     { path: '/', label: 'About' },
     { path: '/resume', label: 'Resume' },
-    { path: '/research', label: 'Research' },
     { path: '/reading', label: 'Reading' },
     { path: '/roadtrip', label: 'Roadtrip' },
+    { path: '/ramsey', label: 'Ramsey Theory' },
+    { path: '/campus-hate', label: 'Campus Hate' },
     { path: '/contact', label: 'Contact' },
   ];
   
