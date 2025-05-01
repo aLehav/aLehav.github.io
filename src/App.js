@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Sidebar from './components/Sidebar';
@@ -12,7 +12,7 @@ import Antisemitism from './pages/Antisemitism';
 
 function App() {
   // You can use this state to change theme if needed
-  const [theme, setTheme] = useState('default');
+  const theme = 'default'
   
   return (
     <Router>
