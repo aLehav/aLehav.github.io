@@ -30,7 +30,7 @@ function Auth({ onLogin }) {
   return (
     <div className="note-box" style={{ fontSize: '0.9rem', color: 'var(--accent-color)', textAlign: 'right' }}>
       {user ? (
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '10px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: '10px' }}>
           <span>Welcome, {user.displayName}</span>
           <button 
             onClick={handleLogout} 
@@ -45,7 +45,7 @@ function Auth({ onLogin }) {
           </button>
         </div>
       ) : (
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '10px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: '10px' }}>
           <span>Private content requires login</span>
           <button 
             onClick={handleLogin} 
