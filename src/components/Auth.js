@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { auth, provider, signInWithPopup } from './firebase';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
-import './Auth.css'
 
 function Auth({ onLogin }) {
   const [user, setUser] = useState(null);
@@ -29,14 +28,37 @@ function Auth({ onLogin }) {
   }, [onLogin]);
 
   return (
-    <div className="auth">
+    <div className="note-box" style={{ fontSize: '0.9rem', color: 'var(--accent-color)', textAlign: 'right' }}>
       {user ? (
-        <>
-          <p>Welcome, {user.displayName}</p>
-          <button onClick={handleLogout}>Logout</button>
-        </>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '10px' }}>
+          <span>Welcome, {user.displayName}</span>
+          <button 
+            onClick={handleLogout} 
+            className="button" 
+            style={{ 
+              fontSize: '0.8rem', 
+              padding: '0.3rem 0.8rem', 
+              margin: '0' 
+            }}
+          >
+            Logout
+          </button>
+        </div>
       ) : (
-        <button onClick={handleLogin}>Login with Google</button>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '10px' }}>
+          <span>Private content requires login</span>
+          <button 
+            onClick={handleLogin} 
+            className="button" 
+            style={{ 
+              fontSize: '0.8rem', 
+              padding: '0.3rem 0.8rem', 
+              margin: '0' 
+            }}
+          >
+            Login
+          </button>
+        </div>
       )}
     </div>
   );

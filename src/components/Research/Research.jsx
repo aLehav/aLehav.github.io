@@ -49,8 +49,19 @@ function Research() {
               efficient encoded representations of graphs to leverage transformer architectures. However, in the 
               process I thought of an idea for a classical algorithm. This algorithm would theoretically be a new 
               fast way to extend a set of counterexamples of size n to size n+1 much faster than existing approaches. 
-              Over the summer and school year I have been working on a paper and python library detailing my findings. 
-              Hopefully in the near future I'll submit the paper to a journal.
+            </p>
+            <div className="theorem">
+              <div className="theorem-title">Main Theorem</div>
+              <p>
+                For any simple, undirected graph G<sub>n+1</sub> of size n + 1, if G<sub>n+1</sub> has 
+                max&#123;s, t&#125; + 1 induced subgraphs in R(s, t, n), then G<sub>n+1</sub> ∈ R(s, t, n + 1).
+              </p>
+            </div>
+            <p>
+              The theorem above is the main theorem underpinning the work, derrived as an application of the set cover problem.
+              I developed from this an algorithm, along with a paper and python library to go along with it. The paper, which links
+              the code, can be found below. It was my first time creating and publishing a python library, as well as my first
+              paper in the field of computational mathematics.
             </p>
             <a 
               href="https://arxiv.org/abs/2411.04267" 

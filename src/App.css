@@ -298,8 +298,9 @@
     background-color: var(--primary-color);
     color: var(--secondary-color);
     text-decoration: none;
-    font-family: var(--font-mono);
+    font-family: var(--font-main);
     transition: background-color 0.2s;
+    border: none;
   }
   
   .button:hover {
