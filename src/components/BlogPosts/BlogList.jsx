@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import BlogPost from './BlogPost';
-import './BlogList.css';
 
 function BlogList({ posts }) {
   const [filter, setFilter] = useState('');

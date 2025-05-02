@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { doc, getDoc, getDocs, collection } from 'firebase/firestore';
-import BlogList from './BlogList';
-import Auth from '../Auth';
-import { db } from '../firebase'
+import BlogList from '../components/BlogPosts/BlogList';
+import Auth from '../components/Auth';
+import { db } from '../components/firebase'
 import { query, where } from 'firebase/firestore';
 
 function Roadtrip() {

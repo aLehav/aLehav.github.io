@@ -1,6 +1,5 @@
 import React from 'react';
-import { Scatterplot } from './BookPlot/Scatterplot';
-import { data } from './BookPlot/data';
+import { Scatterplot } from '../components/BookPlot/Scatterplot';
 
 function Reading() {
   return (
@@ -22,7 +21,7 @@ function Reading() {
           padding: '1rem',
           backgroundColor: 'white'
         }}>
-          <Scatterplot data={data} />
+          <Scatterplot />
         </div>
       </section>
 

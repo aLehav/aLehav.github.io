@@ -1,4 +1,3 @@
-import styles from "./tooltip.module.css";
 
 export const Tooltip = ({ interactionData }) => {
   if (!interactionData) {
@@ -9,39 +8,39 @@ export const Tooltip = ({ interactionData }) => {
 
   return (
     <div
-      className={styles.tooltip}
+      className="tooltip"
       style={{
         left: xPos,
         top: yPos,
       }}
     >
-      <b className={styles.title}>{name}</b>
+      <b className="tooltip-title">{name}</b>
       
 
-      <div className={styles.row}>
+      <div className="tooltip-row">
         <i>{author}</i>
       </div>
 
-      <div className={styles.separator} />
+      <div className="tooltip-separator" />
 
-      <div className={styles.topHalfContainer} style={{ borderColor: color }}>
-        <div className={styles.row}>
+      <div className="tooltip-topHalfContainer" style={{ borderColor: color }}>
+        <div className="tooltip-row">
           <span>How Much I Liked It</span>
           <b>{Math.round(x * 100)} / 100</b>
         </div>
-        <div className={styles.row}>
+        <div className="tooltip-row">
           <span>How Much I Suggest It</span>
           <b>{Math.round(y * 100)} / 100</b>
         </div>
-        <div className={styles.row}>
+        <div className="tooltip-row">
           <span>Pages</span>
           <b>{size}</b>
         </div>
       </div>
 
-      <div className={styles.separator} />
+      <div className="tooltip-separator" />
 
-      <div className={styles.row}>
+      <div className="tooltip-row">
         {review}
       </div>
     </div>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './BlogPost.css';
 
 function BlogPost({ post }) {
   const [currentImage, setCurrentImage] = useState(0);
