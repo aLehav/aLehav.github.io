@@ -39,7 +39,7 @@ function BlogPost({ post }) {
       {post.images && post.images.length > 0 && (
         <div className="image-carousel">
           <img 
-            src={post.images[currentImage]} 
+            src={`/images/${post.images[currentImage]}`} 
             alt={`${post.city} - ${currentImage + 1}`} 
             className="carousel-image"
           />
