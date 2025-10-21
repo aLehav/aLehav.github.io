@@ -2,8 +2,10 @@
 
 # personal scripts
 BlogPostInserter.js
+BookReviewInserter.js
 personal-site-55402-firebase-adminsdk*.json
 blog-posts.json
+book-reviews.json
 
 # dependencies
 /node_modules
@@ -28,3 +30,6 @@ yarn-debug.log*
 yarn-error.log*
 
 /src/components/Diary/Entries/Personal
+
+# firebase
+.cache

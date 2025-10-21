@@ -62,8 +62,9 @@ export const Scatterplot = () => {
   const sortedData = [...bookData].sort((a, b) => b.size - a.size);
 
   // Scales
-  const xScale = d3.scaleLinear().domain([-0.02, 1.02]).range([0, containerSize.width]);
-  const yScale = d3.scaleLinear().domain([-0.02, 1.02]).range([containerSize.height, 0]);
+  const margin = Math.min(containerSize.width, containerSize.height) * 0.05;
+  const xScale = d3.scaleLinear().domain([0, 1]).range([margin, containerSize.width - margin]);
+  const yScale = d3.scaleLinear().domain([0, 1]).range([containerSize.height - margin, margin]);
   const sizeScale = d3.scaleSqrt().domain([0, 2000]).range([3, 50]);
 
   // All circles, 1 per book
@@ -121,32 +122,48 @@ export const Scatterplot = () => {
     </div>
   );
 
-  return (
-    <div ref={containerRef} className="scatterplotContainer" style={{ position: "relative", width: "100%", minWidth: "600px", height: "100%" }}>
-      <CategoryLegend />
-      <svg width={containerSize.width} height={containerSize.height} shapeRendering={"crispEdges"}>
-        <g>
-          <Axes
-            x={xScale(0.43)}
-            y={yScale(0.41)}
-            width={containerSize.width}
-            height={containerSize.height}
-          />
-          {circles}
-        </g>
-      </svg>
-      <div
-        style={{
-          position: "absolute",
-          width: containerSize.width,
-          height: containerSize.height,
-          top: 0,
-          left: 0,
-          pointerEvents: "none",
-        }}
-      >
-        <Tooltip interactionData={interactionData} />
-      </div>
+  // Calculate bounding rect before return
+const containerRect = containerRef.current
+  ? containerRef.current.getBoundingClientRect()
+  : { left: 0, top: 0 };
+
+return (
+  <div
+    ref={containerRef}
+    className="scatterplotContainer"
+    style={{ position: "relative", width: "100%", height: "100%" }}
+  >
+    <CategoryLegend />
+    <svg
+      width={containerSize.width}
+      height={containerSize.height}
+      shapeRendering={"crispEdges"}
+    >
+      <g>
+        <Axes
+          x={xScale(0.43)}
+          y={yScale(0.41)}
+          width={containerSize.width}
+          height={containerSize.height}
+        />
+        {circles}
+      </g>
+    </svg>
+
+    {/* Tooltip overlay rendered on top */}
+    <div
+      style={{
+        position: "fixed",
+        left: containerRect.left,
+        top: containerRect.top,
+        width: containerSize.width,
+        height: containerSize.height,
+        pointerEvents: "none",
+        zIndex: 2147483647,
+      }}
+    >
+      <Tooltip interactionData={interactionData} />
     </div>
+  </div>
   );
 };
