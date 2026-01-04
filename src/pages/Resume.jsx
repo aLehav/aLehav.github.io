@@ -19,9 +19,17 @@ function Resume() {
         <div className="item">
           <div className="item-header">
             <div className="item-title">M.S. Computer Science, USC</div>
-            <div className="item-date">Jan 2024 – Dec 2025</div>
+            <div className="item-date">Jan 2024 – May 2026</div>
           </div>
           <div className="item-subtitle">Progressive Degree Program</div>
+        </div>
+
+        <div className="item">
+          <div className="item-header">
+            <div className="item-title">Ph.D. Computer Science, University of Göttingen</div>
+            <div className="item-date">Jan 2026 – Present</div>
+          </div>
+          <div className="item-subtitle">Focus on Fake News Detection and Generation</div>
         </div>
       </section>
       

@@ -50,7 +50,7 @@ function Roadtrip() {
           
           <section className="section">
               <p>
-                  From May to November, I've been roadtripping across North America. 50 states, 1 US territory, and 4 Canadian providences. 40+ national parks. Lots of good food and bad nights of sleep.
+                  From May to November, I roadtripped across North America. 50 states, 1 US territory, and 4 Canadian providences. 40+ national parks. Lots of good food and bad nights of sleep.
               </p>
           </section>
 

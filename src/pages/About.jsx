@@ -8,19 +8,19 @@ function About() {
       <section className="section">
         <h2 className="section-title">Biography</h2>
         <p>
-          I am a Master's student at USC studying Computer Science. My undergraduate degree is from USC in Applied Mathematics with a minor in Computer Science. My main area of expertise is machine learning, having done projects within cybersecurity, CRM, and video processing. 
+          I am an incoming PhD student in Computer Science at the University of Göttingen. My master's degree will be from USC in Computer Science. My undergraduate degree is from USC in Applied Mathematics with a minor in Computer Science. My main area of expertise is machine learning, having done projects within cybersecurity, CRM, and video processing.
         </p>
         <p>
           In my spare time, I research Ramsey Theory, a subset of combinatorics, and how hate proliferates on college campuses. I read as much as I can, conveniently using it as an excuse to explore coffee shops of whichever city I find myself in. Fitness is also important to me, and I cycle between climbing, running, and lifting, depending on minor injuries and friend availability at any given moment.
         </p>
         <p>
-          In the near future, I will be road tripping all 50 states and hopefully all the national parks, contingent on weather in Alaska. I will be using the time to see more of the world, become more mindful of myself and my habits, and touch grass, which is quite hard to do while studying Computer Science. In lieu of Instagram, I'll be posting blogs and pictures on this website for family and friends to see.
+           I just finished road tripping all 50 states and 45 national parks. In lieu of Instagram, I've posted blogs and pictures on this website for family and friends to see.
         </p>
       </section>
       <section className="section">
         <h2 className="section-title">Work Inquiries</h2>
         <p>
-          I will be available for full-time work starting December 2025 or later. My areas of interest include machine learning engineering, software engineering, full-stack development, and research positions. Impact is incredibly important to me. Please contact me via email with any inquiries.
+          I am currently available for software contracting work. My areas of interest include machine learning engineering, software engineering, full-stack development, and research positions. Impact is incredibly important to me. Please contact me via email with any inquiries.
         </p>
       </section>
       <section className="section">

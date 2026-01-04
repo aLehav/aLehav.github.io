@@ -1,5 +1,6 @@
 import React from 'react';
 import { Scatterplot } from '../components/BookPlot/Scatterplot';
+import ReadingShelf from '../components/HarvardClassics/ReadingShelf';
 
 function Reading() {
   return (
@@ -23,6 +24,14 @@ function Reading() {
         }}>
           <Scatterplot />
         </div>
+      </section>
+
+      <section className='section'>
+        <h2 className='section-title'>Harvard Classics</h2>
+        <p>
+          The Harvard Classics are a collection of 50 books, with a 20 book "shelf of fiction" extension, designed to give working people a liberal arts education at their own pace. I found the shelf of fiction original 1917 print for sale in New York City, and the original 1909 classics in Salt Lake City. My goal is to eventually read this whole collection. Darkened books are ones I've read.   
+        </p>
+        <ReadingShelf />        
       </section>
 
       <section className="section">
