@@ -25,7 +25,7 @@ function App() {
             <Route path="/reading" element={<Reading />} />
             <Route path="/roadtrip" element={<Roadtrip />} />
             <Route path="/ramsey" element={<Ramsey />} />
-            <Route path="/campus-hate" element={<Antisemitism />} />
+            <Route path="/hate-online" element={<Antisemitism />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
           {/* <footer className="footer">

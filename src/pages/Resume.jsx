@@ -7,7 +7,23 @@ function Resume() {
       
       <section className="section">
         <h2 className="section-title">Education</h2>
-        
+        <div className="item">
+          <div className="item-header">
+            <div className="item-title">M.S. Computer Science, USC</div>
+            <div className="item-date">Jan 2024 – May 2026</div>
+          </div>
+          <div className="item-subtitle">3.66 GPA | Progressive Degree Program</div>
+          <div className="item-description">
+            <ul>
+              <li>Won Scope Spring 2023 hackathon, club member for all 4 years.</li>
+              <li>TAMID Director of Finance and Director of Financial Consulting.</li>
+              <li>Authored "Ramsey Number Counterexample Checking and One Vertex Extension Linearly Related to s and t."</li>
+              <li>Coauthored "RamseyRL: A Framework for Intelligent Ramsey Number Counterexample Searching."</li>
+              <li>Made and sold lollipops.</li>
+            </ul>
+          </div>
+        </div>
+
         <div className="item">
           <div className="item-header">
             <div className="item-title">B.S. Applied Math, USC</div>
@@ -16,26 +32,48 @@ function Resume() {
           <div className="item-subtitle">3.86 GPA | Presidential Scholar | Computer Science Minor</div>
         </div>
         
-        <div className="item">
-          <div className="item-header">
-            <div className="item-title">M.S. Computer Science, USC</div>
-            <div className="item-date">Jan 2024 – May 2026</div>
-          </div>
-          <div className="item-subtitle">Progressive Degree Program</div>
-        </div>
-
-        <div className="item">
-          <div className="item-header">
-            <div className="item-title">Ph.D. Computer Science, University of Göttingen</div>
-            <div className="item-date">Jan 2026 – Present</div>
-          </div>
-          <div className="item-subtitle">Focus on Fake News Detection and Generation</div>
-        </div>
       </section>
       
       <section className="section">
         <h2 className="section-title">Experience</h2>
-        
+        <div className="item">
+          <div className="item-header">
+            <div className="item-title">Software Engineer, AddressHate</div>
+            <div className="item-date">May 2026 – Present</div>
+          </div>
+          <div className="item-description">
+            <ul>
+              <li>Leading development of AddressHate's software products, empowering research related to detecting and understanding hate online.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="item">
+          <div className="item-header">
+            <div className="item-title">Software Contractor</div>
+            <div className="item-date">Jun 2025 – Present</div>
+          </div>
+          <div className="item-description">
+            <ul>
+              <li>Help automate the archiving on campus hate online with AMCHA Initiative.</li>
+              <li>Build tools to measure and explore viewpoint diversity in higher ed. with professors at Claremont McKenna College. Article "Colleges Teach Gender and Race. They Ignore Class." built on tool.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="item">
+          <div className="item-header">
+            <div className="item-title">NLP Researcher, GippLab at University of Göttingen</div>
+            <div className="item-date">Feb 2026 – May 2026</div>
+          </div>
+          <div className="item-description">
+            <ul>
+              <li>Generated fake news used to train detectors as part of a Korean Institute of Police Technology (KIPoT) grant.</li>
+              <li>Focused on the text generation side using pretrained and abliterated open models.</li>
+            </ul>
+          </div>
+        </div>
+
         <div className="item">
           <div className="item-header">
             <div className="item-title">CyberFire Research Intern, Los Alamos National Labs</div>
@@ -105,59 +143,6 @@ function Resume() {
       </section>
       
       <section className="section">
-        <h2 className="section-title">Activities</h2>
-        
-        <div className="item">
-          <div className="item-header">
-            <div className="item-title">Scope Club Member, USC</div>
-            <div className="item-date">Sep 2021 – May 2025</div>
-          </div>
-          <div className="item-description">
-            <ul>
-              <li>Won Spring 2023 hackathon as full stack developer using React with Firebase and Spotify API integration</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div className="item">
-          <div className="item-header">
-            <div className="item-title">TAMID Director of Financial Consulting, USC</div>
-            <div className="item-date">Sep 2021 – Dec 2024</div>
-          </div>
-          <div className="item-description">
-            <ul>
-              <li>Provided financial valuation and modeling directly for Israeli startups, aiming for growth from a VC perspective</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div className="item">
-          <div className="item-header">
-            <div className="item-title">Independent Math Research, USC</div>
-            <div className="item-date">May 2023 – Aug 2023</div>
-          </div>
-          <div className="item-description">
-            <ul>
-              <li>Authored "Ramsey Number Counterexample Checking and One Vertex Extension Linearly Related to s and t", submitted to E-JC</li>
-              <li>Coauthored "RamseyRL: A Framework for Intelligent Ramsey Number Counterexample Searching", submitted to AAAI 2024</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div className="item">
-          <div className="item-header">
-            <div className="item-title">Lollipop Hobbyist</div>
-            <div className="item-date">Dec 2019 – Dec 2022</div>
-          </div>
-          <div className="item-description">
-            <ul>
-              <li>Sold lollipops to students at 5 colleges, having made over $4000 in profit</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      
-      <section className="section">
         <h2 className="section-title">Skills</h2>
         
         <div className="skills-container">
@@ -176,14 +161,6 @@ function Resume() {
             </ul>
           </div>
         </div>
-      </section>
-      
-      <section className="section">
-        <h2 className="section-title">Download Resume</h2>
-        <p>You can also view or download my complete resume as a PDF:</p>
-        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="button">
-          View Full PDF
-        </a>
       </section>
     </>
   );

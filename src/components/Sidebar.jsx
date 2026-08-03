@@ -10,7 +10,7 @@ function Sidebar() {
     { path: '/reading', label: 'Reading' },
     { path: '/roadtrip', label: 'Roadtrip' },
     { path: '/ramsey', label: 'Ramsey Theory' },
-    { path: '/campus-hate', label: 'Campus Hate' },
+    { path: '/hate-online', label: 'Hate Online' },
     { path: '/contact', label: 'Contact' },
   ];
   
@@ -18,7 +18,7 @@ function Sidebar() {
     <aside className="sidebar">
       <div className="sidebar-header">
         <h1 className="sidebar-name">Adam Lehavi</h1>
-        <div className="sidebar-title">Applied Math & CS<br/>University of Southern California</div>
+        <div className="sidebar-title">SWE & MLE<br/>M.S. CS USC</div>
       </div>
       <nav>
         <ul className="nav-list">

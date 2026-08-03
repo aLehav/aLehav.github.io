@@ -18,7 +18,7 @@ function Contact() {
           </div>
           <div className="info">
             <div className="label">Email</div>
-            <div className="value"><a href="mailto:alehavi@usc.edu">alehavi@usc.edu</a></div>
+            <div className="value"><a href="mailto:alehavi@addresshate.org">alehavi@addresshate.org</a></div>
           </div>
         </div>
         

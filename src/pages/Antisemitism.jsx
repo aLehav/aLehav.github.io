@@ -3,14 +3,10 @@ import React from 'react';
 function Antisemitism() {
   return (
     <>
-      <h1 className="page-title">Campus Hate Research</h1>
+      <h1 className="page-title">Digital Hate Research</h1>
       <section className="section">
-        <div className="note-box">
-            If you are interested in annotating articles or producing a report for your school, please contact me.
-        </div>
         <p>
-            Over the last 2 years, I've done research into answering the core question of if anti-Zionist student 
-            newspaper reporting leads to antisemitic hate crimes on campuses. This project is an idea that I came 
+            Over the last 3 years, I've researched how hate in digitial media can be measured and how it affects actions in the real world. This began with the question of if anti-Zionist student newspaper reporting leads to antisemitic hate crimes on campuses. This project was an idea that I came 
             up with and worked at initially with Olami through the Social Media Climate Initiative. The project 
             began as an open question, grew into me leading a team of talented and fast-learning interns, and led to a preprint paper under Olami.
         </p>
@@ -22,26 +18,19 @@ function Antisemitism() {
         >
             Unsupervised Bias Detection in College Student Newspapers
         </a>
-        
-            
         <p>    
-            Since working with Olami, I've contributed hundreds of hours solo on advancing this project further. I've learned much about nonprofits, 
-            data scraping and analysis, and social science academia. I've also had the pleasure of speaking with bright people at the Media Bias Group, Decoding Antisemitism initiative, and Hillel. In its current form, the project is a complete end-to-end pipeline for extracting student media, querying by topic, annotating online, and performing analysis. The database itself contains 266GB of student newspaper articles, spanning 500+ universities in the U.S. Analysis is performed on 10,000 antisemitic incidents reported from the AMCHA initiative and FBI.  This data can be used to report on events happening on campuses to better inform administrators on how their policies and campus discourse may affect students. In addition, machine learning models can be trained to help label and predict based on this data.
+            After working with Olami, I continued to develop a platform for analytics, annotation, and machine learning model training and analysis. This site integrated hate data from the FBI as well as the AMCHA Initiative, and I was able to have many productive talks with talented people from the Media Bias Group, Decoding Antisemitism initiative, and Hillel on the project. I was able to produce a polot report for the 5C's state of antisemitism, and built a demo website to inform people via digestible and explainable analytics.
         </p>
-
-        <p> 
-            A pilot report and mockup site can be found below. The ultimate goal is to have the site integrated with current data, providing and interactive qualitative and quantitative dashboard to inform students, faculty, and administration. The main need for this project to advance is that of annotators, to help find and label antisemitic content.
-        </p>
-
         <a href="/report_4_2_25.pdf" target="_blank" rel="noopener noreferrer" className="button">
         Student Newspapers and Antisemitism on Campus: The Claremont College Pilot Report
         </a>
         <br></br>
         <a href="https://antisemitism-demo-site.web.app/" target="_blank" rel="noopener noreferrer" className="button">
-        Website Mockup
+        Website
         </a>
-
-        
+        <p> 
+            This preliminary work has led me to the exciting work I do today. I work directly with the AMCHA Initiative to help automate the archiving of digital hate. I am reiterating and vastly improving the scope of my initial digital hate detection suite as a Software Engineer at AddressHate, including exploring Anti-Asian Racism, Anti-Black Racism, and Misogyny online.
+        </p>
       </section>
     </>
   );
