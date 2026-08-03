@@ -13,6 +13,15 @@ function Resume() {
             <div className="item-date">Jan 2024 – May 2026</div>
           </div>
           <div className="item-subtitle">3.66 GPA | Progressive Degree Program</div>
+          
+        </div>
+
+        <div className="item">
+          <div className="item-header">
+            <div className="item-title">B.S. Applied Math, USC</div>
+            <div className="item-date">Aug 2021 – May 2025</div>
+          </div>
+          <div className="item-subtitle">3.86 GPA | Presidential Scholar | Computer Science Minor</div>
           <div className="item-description">
             <ul>
               <li>Won Scope Spring 2023 hackathon, club member for all 4 years.</li>
@@ -22,14 +31,6 @@ function Resume() {
               <li>Made and sold lollipops.</li>
             </ul>
           </div>
-        </div>
-
-        <div className="item">
-          <div className="item-header">
-            <div className="item-title">B.S. Applied Math, USC</div>
-            <div className="item-date">Aug 2021 – May 2025</div>
-          </div>
-          <div className="item-subtitle">3.86 GPA | Presidential Scholar | Computer Science Minor</div>
         </div>
         
       </section>
